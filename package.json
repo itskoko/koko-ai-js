@@ -1,0 +1,19 @@
+{
+  "name": "koko-ai-node",
+  "version": "1.0.0",
+  "description": "Node.js Client Library for https://docs.koko.ai",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itskoko/koko-ai-node.git"
+  },
+  "author": "Jed Schmidt <where@jed.is>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itskoko/koko-ai-node/issues"
+  },
+  "homepage": "https://github.com/itskoko/koko-ai-node#readme"
+}
