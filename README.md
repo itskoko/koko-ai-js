@@ -20,26 +20,26 @@ Track content, see more [here](https://docs.koko.ai/#track-endpoints).
 void async function() {
   const classification = await koko.trackContent({
     id: '123',
-    createdAt: new Date().toISOString(),
+    created_at: new Date().toISOString(),
     userId: '123',
     type: 'post',
-    contextId: '123',
-    contentType: 'text',
+    context_id: '123',
+    content_type: 'text',
     content: {text: 'Some content'}
   })
 
   await koko.trackFlag({
     id: '123',
-    flaggerId: '123',
+    flagger_id: '123',
     type: 'spam',
-    createdAt: new Date().toISOString(),
+    created_at: new Date().toISOString(),
     content: {id: '123'}
   })
 
   await koko.trackModeration({
     id: '123',
     type: 'user_warned',
-    createdAt: new Date().toISOString(),
+    created_at: new Date().toISOString(),
     content: {id: '123'}
   })
 }()
