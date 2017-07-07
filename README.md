@@ -20,7 +20,7 @@ Track content, see more [here](https://docs.koko.ai/#track-endpoints).
 void async function() {
   const classification = await koko.trackContent({
     id: '123',
-    createdAt: Time.now,
+    createdAt: new Date().toISOString(),
     userId: '123',
     type: 'post',
     contextId: '123',
