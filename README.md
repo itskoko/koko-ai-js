@@ -7,6 +7,44 @@ koko-ai-node is a Node.js client for https://docs.koko.ai
 
 ## Usage
 
+Create an instance of the client:
+
+```js
+const {Tracker} = require('koko-ai')
+const koko = new Tracker({auth: 'YOUR_AUTH_KEY'})
+```
+
+Track content, see more [here](https://docs.koko.ai/#track-endpoints).
+
+```js
+void async function() {
+  const classification = await koko.trackContent({
+    id: '123',
+    createdAt: Time.now,
+    userId: '123',
+    type: 'post',
+    contextId: '123',
+    contentType: 'text',
+    content: {text: 'Some content'}
+  })
+
+  await koko.trackFlag({
+    id: '123',
+    flaggerId: '123',
+    type: 'spam',
+    createdAt: new Date().toISOString(),
+    content: {id: '123'}
+  })
+
+  await koko.trackModeration({
+    id: '123',
+    type: 'user_warned',
+    createdAt: new Date().toISOString(),
+    content: {id: '123'}
+  })
+}()
+```
+
 ## Testing
 
 ## License
