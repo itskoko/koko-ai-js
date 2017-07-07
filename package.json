@@ -4,7 +4,7 @@
   "description": "Node.js Client Library for https://docs.koko.ai",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node -r dotenv/config test.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/itskoko/koko-ai-node/issues"
   },
-  "homepage": "https://github.com/itskoko/koko-ai-node#readme"
+  "homepage": "https://github.com/itskoko/koko-ai-node#readme",
+  "dependencies": {
+    "dotenv": "^4.0.0"
+  }
 }
