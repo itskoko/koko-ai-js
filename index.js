@@ -5,7 +5,7 @@ const url = require('url')
 
 exports.Tracker = class Tracker {
   constructor(options) {
-    assert.ok('auth' in options, "options.auth not specified.")
+    assert.ok('auth' in options, 'options.auth not specified.')
 
     const endpoint = options.endpoint || 'https://api.koko.ai'
     const {protocol, host} = url.parse(endpoint)
