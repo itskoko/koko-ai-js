@@ -5,6 +5,8 @@ koko-ai-node is a Node.js client for https://docs.koko.ai
 
 ## Install
 
+    npm install koko-ai
+
 ## Usage
 
 Create an instance of the client:
@@ -21,7 +23,7 @@ void async function() {
   const classification = await koko.trackContent({
     id: '123',
     created_at: new Date().toISOString(),
-    userId: '123',
+    user_id: '123',
     type: 'post',
     context_id: '123',
     content_type: 'text',
