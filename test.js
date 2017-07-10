@@ -1,5 +1,3 @@
-process.on('unhandledRejection', err => { throw err })
-
 const {Tracker} = require('.')
 const koko = new Tracker({
   auth: process.env.KOKO_AUTH
@@ -35,4 +33,4 @@ const responses = [
   })
 ]
 
-Promise.all(responses)
+Promise.all(responses).catch(err => { throw err })
