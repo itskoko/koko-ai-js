@@ -22,10 +22,8 @@ Track content, see more [here](https://docs.koko.ai/#track-endpoints).
 void async function() {
   const classification = await koko.trackContent({
     id: '123',
-    created_at: new Date().toISOString(),
     user_id: '123',
     type: 'post',
-    context_id: '123',
     content_type: 'text',
     content: {text: 'Some content'}
   })
@@ -33,16 +31,15 @@ void async function() {
   await koko.trackFlag({
     id: '123',
     flagger_id: '123',
-    type: 'spam',
-    created_at: new Date().toISOString(),
-    content: {id: '123'}
+    reasons: ['crisis'],
+    targets: [{content_id: '123'}]
   })
 
   await koko.trackModeration({
     id: '123',
-    type: 'user_warned',
-    created_at: new Date().toISOString(),
-    content: {id: '123'}
+    moderator_id: '123',
+    action: 'user_warned',
+    target: {content_id: '123'}
   })
 }()
 ```
