@@ -29,8 +29,7 @@ async function testTrackFlag() {
     id: '123',
     flagger_id: '123',
     reasons: ['crisis'],
-    targets: [{content_id: '123'}],
-    target: {content_id: '123'} // TODO: delete
+    targets: [{content_id: '123'}]
   }
 
   await koko.trackFlag(request)
