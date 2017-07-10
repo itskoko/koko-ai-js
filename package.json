@@ -1,6 +1,6 @@
 {
   "name": "koko-ai-node",
-  "version": "1.0.0",
+  "version": "0.0.4",
   "description": "Node.js Client Library for https://docs.koko.ai",
   "main": "index.js",
   "scripts": {
