@@ -46,6 +46,10 @@ void async function() {
 
 ## Testing
 
+Tests require version 8.1 or later of node.
+
+    npm run test
+
 ## License
 
 ```
