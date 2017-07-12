@@ -25,21 +25,24 @@ void async function() {
     user_id: '123',
     type: 'post',
     content_type: 'text',
-    content: {text: 'Some content'}
+    content: {text: 'Some content'},
+    created_at: new Date().toISOString()
   })
 
   await koko.trackFlag({
     id: '123',
     flagger_id: '123',
     reasons: ['crisis'],
-    targets: [{content_id: '123'}]
+    targets: [{content_id: '123'}],
+    created_at: new Date().toISOString()
   })
 
   await koko.trackModeration({
     id: '123',
     moderator_id: '123',
     action: 'user_warned',
-    target: {content_id: '123'}
+    targets: [{content_id: '123'}],
+    created_at: new Date().toISOString()
   })
 }()
 ```
