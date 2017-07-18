@@ -49,8 +49,8 @@ exports.Tracker = class Tracker {
           try {
             const data = JSON.parse(json)
 
-            'error' in data
-              ? reject(new Error(data.error.join('\n')))
+            'errors' in data
+              ? reject(new Error(data.errors.join('\n')))
               : resolve(data)
           }
 
